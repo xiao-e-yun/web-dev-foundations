@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind CSS 練習</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #landing {
+        color: #333;
+        text-align: center;
+        font-size: xx-large;
+      }
+      .strong {
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
     <!-- 
-    步驟一：引入 Tailwind CSS
-    請將以下程式碼加入到 head 標籤中：
-    <script src="https://cdn.tailwindcss.com"></script> 
+      步驟一：引入 Tailwind CSS
+      請將以下程式碼加入到 head 標籤中：
+      <script src="https://cdn.tailwindcss.com"></script> 
 
     步驟二：
     1. 前往 Tailwind CSS 官方文件：https://tailwindcss.com/docs
@@ -18,10 +30,10 @@
   </head>
   <body>
     <!-- 導航列 -->
-    <nav>
-      <div>
+    <nav class="w-full px-4 py-2 border-b">
+      <div class="flex justify-between">
         <img src="https://placehold.jp/100x50.png" alt="Logo" />
-        <ul>
+        <ul class="flex gap-4 items-center text-lg">
           <li><a href="#">首頁</a></li>
           <li><a href="#">關於我們</a></li>
           <li><a href="#">服務項目</a></li>
@@ -31,42 +43,42 @@
     </nav>
 
     <!-- 首頁橫幅 -->
-    <header>
-      <h1>探索 Tailwind CSS 的魅力</h1>
-      <p>透過實作學習現代化的 CSS 框架</p>
-      <div>
-        <button>開始學習</button>
-        <button>觀看教學</button>
+    <header class="w-full text-center py-12 flex flex-col gap-4">
+      <h1 id="landing">探索 Tailwind CSS 的魅力</h1> 
+      <p class="strong">透過實作學習現代化的 CSS 框架</p>
+      <div class="flex flex-col gap-4">
+        <button class="m-auto px-2 py-1 border rounded bg-lime-300 font-bold">開始學習</button>
+        <button class="m-auto px-2 py-1 border rounded bg-lime-300 font-bold">觀看教學</button>
       </div>
     </header>
 
     <!-- 主要內容區 -->
     <main>
       <!-- 特色介紹 -->
-      <section>
-        <h2>為什麼選擇我們？</h2>
-        <div>
-          <div>
+      <section class="bg-cyan-300 p-4">
+        <h2 class="text-center text-2xl">為什麼選擇我們？</h2>
+        <div  class="w-full flex justify-evenly">
+          <div class="w-36 bg-indigo-300 border rounded text-center p-2">
             <img src="https://placehold.jp/150x150.png" alt="圖示 1" />
-            <h3>快速開發</h3>
-            <p>使用 Utility-First 的方法，加速開發流程</p>
+            <h3 class="text-2xl">快速開發</h3>
+            <p class="text-sm">使用 Utility-First 的方法，加速開發流程</p>
           </div>
-          <div>
+          <div class="w-36 bg-indigo-300 border rounded text-center p-2">
             <img src="https://placehold.jp/150x150.png" alt="圖示 2" />
-            <h3>響應式設計</h3>
-            <p>輕鬆打造適配各種螢幕尺寸的網站</p>
+            <h3 class="text-2xl">響應式設計</h3>
+            <p class="text-sm">輕鬆打造適配各種螢幕尺寸的網站</p>
           </div>
-          <div>
+          <div class="w-36 bg-indigo-300 border rounded text-center p-2">
             <img src="https://placehold.jp/150x150.png" alt="圖示 3" />
-            <h3>客製化設計</h3>
-            <p>依據需求打造獨特的使用者介面</p>
+            <h3 class="text-2xl">客製化設計</h3>
+            <p class="text-sm">依據需求打造獨特的使用者介面</p>
           </div>
         </div>
       </section>
 
       <!-- 產品展示 -->
-      <section>
-        <h2>熱門課程</h2>
+      <section class="p-4">
+        <h2 class="text-center text-2xl">熱門課程</h2>
         <div>
           <div>
             <img src="https://placehold.jp/300x200.png" alt="課程 1" />
@@ -78,7 +90,7 @@
           <div>
             <img src="https://placehold.jp/300x200.png" alt="課程 2" />
             <h3>CSS 樣式設計</h3>
-            <p>掌握網頁設計的核心技巧</p>
+            <p>掌握網頁設計的核心技巧</p>`
             <p>課程時長：3 小時</p>
             <button>立即報名</button>
           </div>
