@@ -30,14 +30,19 @@
   </head>
   <body>
     <!-- 導航列 -->
-    <nav class="w-full px-4 py-2 border-b">
-      <div class="flex justify-between">
+    <nav class="w-full px-4 py-2 border-b sticky top-0 bg-white shadow-md z-10">
+      <div class="flex justify-between flex-wrap">
         <img src="https://placehold.jp/100x50.png" alt="Logo" />
-        <ul class="flex gap-4 items-center text-lg">
-          <li><a href="#">首頁</a></li>
-          <li><a href="#">關於我們</a></li>
-          <li><a href="#">服務項目</a></li>
-          <li><a href="#">聯絡資訊</a></li>
+        <button class="md:hidden" onclick="document.getElementById('nav-list').classList.toggle('max-md:hidden')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+        <ul class="text-center flex gap-4 items-center text-lg max-md:hidden max-md:w-full max-md:flex-col max-md:gap-1" id="nav-list">
+          <li class="max-md:w-full"><a href="#" class="max-md:block">首頁</a></li>
+          <li class="max-md:w-full"><a href="#" class="max-md:block">關於我們</a></li>
+          <li class="max-md:w-full"><a href="#" class="max-md:block">服務項目</a></li>
+          <li class="max-md:w-full"><a href="#" class="max-md:block">聯絡資訊</a></li>
         </ul>
       </div>
     </nav>
@@ -53,9 +58,9 @@
     </header>
 
     <!-- 主要內容區 -->
-    <main>
+    <main class="border-t">
       <!-- 特色介紹 -->
-      <section class="bg-cyan-300 p-4">
+      <section class="p-4">
         <h2 class="text-center text-2xl">為什麼選擇我們？</h2>
         <div  class="w-full flex justify-evenly">
           <div class="w-36 bg-indigo-300 border rounded text-center p-2">
@@ -76,30 +81,44 @@
         </div>
       </section>
 
+      <div class="h-px 100 bg-gray-300 my-4 mx-4" style="width: calc(100% - 2rem);"></div>
+
       <!-- 產品展示 -->
       <section class="p-4">
         <h2 class="text-center text-2xl">熱門課程</h2>
-        <div>
-          <div>
-            <img src="https://placehold.jp/300x200.png" alt="課程 1" />
-            <h3>HTML 基礎教學</h3>
-            <p>學習網頁結構的基本元素</p>
-            <p>課程時長：2 小時</p>
-            <button>立即報名</button>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="p-2 bg-gray-200 border rounded text-center hover:scale-105 transition-transform duration-300">
+            <img class="w-full rounded" src="https://placehold.jp/300x200.png" alt="課程 1" />
+            <div class="flex justify-between p-2">
+              <h3 class="text-2xl font-bold" >HTML 基礎教學</h3>
+              <p>學習網頁結構的基本元素</p>
+            </div>
+            <div class="flex justify-between">
+              <p>課程時長：2 小時</p>
+              <button class="rounded bg-orange-100 py-1 px-2">立即報名</button>
+            </div>
           </div>
-          <div>
-            <img src="https://placehold.jp/300x200.png" alt="課程 2" />
-            <h3>CSS 樣式設計</h3>
-            <p>掌握網頁設計的核心技巧</p>`
-            <p>課程時長：3 小時</p>
-            <button>立即報名</button>
+          <div class="p-2 bg-gray-200 border rounded text-center hover:scale-105 transition-transform duration-300">
+            <img class="w-full rounded" src="https://placehold.jp/300x200.png" alt="課程 2" />
+            <div class="flex justify-between p-2">
+              <h3 class="text-2xl font-bold" >CSS 樣式設計</h3>
+              <p>掌握網頁設計的核心技巧</p>
+            </div>
+            <div class="flex justify-between">
+              <p>課程時長：3 小時</p>
+              <button class="rounded bg-orange-100 py-1 px-2">立即報名</button>
+            </div>
           </div>
-          <div>
-            <img src="https://placehold.jp/300x200.png" alt="課程 3" />
-            <h3>JavaScript 互動程式</h3>
-            <p>為網頁添加豐富的互動效果</p>
-            <p>課程時長：4 小時</p>
-            <button>立即報名</button>
+          <div class="p-2 bg-gray-200 border rounded text-center hover:scale-105 transition-transform duration-300">
+            <img class="w-full rounded" src="https://placehold.jp/300x200.png" alt="課程 3" />
+            <div class="flex justify-between p-2">
+              <h3 class="text-2xl font-bold" >JavaScript 互動程式</h3>
+              <p>為網頁添加豐富的互動效果</p>
+            </div>
+            <div class="flex justify-between">
+              <p>課程時長：4 小時</p>
+              <button class="rounded bg-orange-100 py-1 px-2">立即報名</button>
+            </div>
           </div>
         </div>
       </section>
